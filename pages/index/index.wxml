@@ -1,0 +1,71 @@
+<view class='content' style='background-image: url({{bcg}});'>
+
+
+  <view style='padding:10px;' class='search'>
+
+
+
+    <image src='../image/search.png' style='width:15px;height:15px;margin-right:5px;'></image>
+    <input style='width:200px' type='text' placeholder='输出城市，快速查询天气信息' confirm-type='search' bindconfirm='commitSearch' value='{{searchText}}'></input>
+    <view style='text-align: right' bindtap='choose'>
+      <image src='../image/down.png' style='width:15px;height:15px;' class='jiantou'></image>
+    </view>
+  </view>
+
+
+  <!-- 今日天气板块 -->
+  <view class='today'>
+    <!-- 内容框 -->
+    <view class='info'>
+      <!-- 温度 -->
+      <view class='now'>今天</view>
+      <view class='temp'>{{today.low}}℃~{{today.high}}℃</view>
+      <view class='weather'>{{today.text_day}} | 空气 {{todayair}} </view>
+
+      <view class='city' style='margin-right:5px;margin-top:50px;display:flex;flex-direction:row;justify-content:flex-end'>{{city}}
+      </view>
+
+    </view>
+
+  </view>
+
+  <!-- 逐小时天气板块 -->
+
+
+  <view class="hour">
+
+    <scroll-view scroll-x="true" style=" white-space: nowrap; width: 100%" class='sv'>
+
+      <view style='display: inline-block' wx:for="{{hour}}" class='shishi'>
+        <view>{{item.time}}</view>
+        <view>
+          <image class="img" style='width:15px;height:15px;margin-bottom:5px;margin-top:5px;' src="../image/{{item.code}}@1x.png"></image>
+        </view>
+        <view style='margin-bottom:10px'>{{item.text}}</view>
+
+        <view>{{item.temperature}}℃</view>
+
+      </view>
+    </scroll-view>
+
+  </view>
+  <!--  未来天气板块 -->
+
+  <import src='../template/template.wxml' />
+  <view class='future'>
+
+
+    <block wx:for="{{future}}">
+      <view class='future-item'>
+        <view class='cs'>{{item.date}}</view>
+        <view class='pic'>
+          <image style='width:20px;height:20px;margin-right:10px;' src='../image/{{item.code_day}}@1x.png'></image>
+          <view>{{item.text_day}}</view>
+        </view>
+        <view class='cs'>{{item.low}}℃/{{item.high}}℃</view>
+
+      </view>
+    </block>
+  </view>
+
+</view>

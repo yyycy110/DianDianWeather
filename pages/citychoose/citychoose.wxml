@@ -1,0 +1,31 @@
+<view class='content'>
+
+  <view class='main'>
+
+    <view class='main2'>
+      <image src='../image/search_grey.png' style='width:20px;height:20px;margin-right:10px;margin-top:3px;'></image>
+      <input class='search' placeholder='搜索城市' value="{{searchText}}" confirm-type='search' bindconfirm='select' bindinput='find'>
+      </input>
+    </view>
+
+   <view style='text-align: center ;padding:10px;'  bindtap='cancel'><text>清空</text>
+  </view> 
+  </view>
+
+
+  <scroll-view scroll-y='true' style="height:100%;">
+
+    <view wx:for="{{address}}">
+      <view class='item' data-fullname="{{item.name}}" data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}</view>
+    </view>
+
+
+
+
+  </scroll-view>
+
+
+
+
+
+</view>

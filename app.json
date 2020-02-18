@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/citychoose/citychoose"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#BFEFFF",
+    "navigationBarTitleText": "点点天气",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息用于快速录入检查地点"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

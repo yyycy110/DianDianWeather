@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+display: flex;
+flex-direction: row;
+height: 10%;
+border-bottom: 1px solid;
+border-bottom-color: wheat;
+padding: 25px;
+
+}
+.main2{
+
+   padding: 10px;
+  display: flex;
+  flex-direction: row;
+
+  background-color:#f4f6f9;
+}
+
+.item {
+  height: 30px;
+  padding: 10px;
+  border-bottom: 1px solid;
+  border-bottom-color: gainsboro;
+}

@@ -1,0 +1,119 @@
+@import "../template/template.wxss";
+
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+  height: 60rpx;
+  margin: 15rpx 50rpx;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1rpx solid #fff;
+}
+
+.jiantou {
+  position: absolute;
+  top: 13px;
+  left: 300px; 
+
+}
+
+/*  全局css content  */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+
+  color: #fff;
+  font-size: 16px;
+}
+.info {
+  padding: 15px;
+} 
+
+/*  今天天气板块   */
+
+.today {
+  padding-top: 25px;
+  height: 40%;
+}
+
+.now {
+  text-align: center;
+  font-size: 30px;
+}
+
+.city {
+  color: white;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 10rpx;
+  margin-top: 30rpx;
+  opacity: 0.7;
+}
+
+.temp {
+  font-size: 40px;
+  text-align: center;
+}
+
+.weather {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 实时小时板块 */
+
+.hour {
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.shishi {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  padding: 8px;
+  text-align: center;
+  margin-top: 11px;
+}
+
+/* 未来天气板块 */
+
+.future {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 5rpx;
+  padding-bottom: 40rpx;
+}
+
+.future-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+.pic {
+  display: flex;
+  flex-direction: row;
+}
+
+.cs {
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
